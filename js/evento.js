@@ -5,11 +5,12 @@ var localizame ={
 	geolocaliazar: function(){
 		navigator.geolocation.getCurrentPosition(localizame.mostrarPosicion,localizame.correEnCirculos);
 	},
-	mostrarPosicion: function(posicion){
-		var lat = posicion.coords.latitude;
-    	var lon = posicion.coords.longitude;
+	obtenerPosicion: function(posicion){
+		localizame.mostrarPosicion(posicion.coords.latitude, posicion.coords.longitude);
+	},
+	mostrarPosicion: function(lat,lon){
     	var latlng = new google.maps.LatLng(lat, lon);
-
+    	alert(latlng);
 	    //geocoder = new google.maps.Geocoder();
 	    //geocoder.geocode({ "latLng": latlng }, function (results, status) {
 
