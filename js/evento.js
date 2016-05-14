@@ -6,8 +6,8 @@ var localizame ={
 		navigator.geolocation.getCurrentPosition(localizame.mostrarPosicion,localizame.correEnCirculos);
 	},
 	mostrarPosicion: function(posicion){
-		var lat = position.coords.latitude;
-    	var lon = position.coords.longitude;
+		var lat = posicion.coords.latitude;
+    	var lon = posicion.coords.longitude;
     	var latlng = new google.maps.LatLng(lat, lon);
 
 	    //geocoder = new google.maps.Geocoder();

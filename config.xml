@@ -22,5 +22,4 @@
 	<gap:plugin name="org.apache.cordova.geolocation" />
 	
 	<icon src="'js/img/icon.png'" platform="android" />
-    <access origin="*"/>
 </widget>
