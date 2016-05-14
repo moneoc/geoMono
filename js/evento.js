@@ -3,41 +3,26 @@ var localizame ={
 		document.addEventListener("deviceready",localizame.geolocaliazar,false);
 	},
 	geolocaliazar: function(){
-		navigator.geolocation.getCurrentPosition(localizame.mostrarPosicion,localizame.correEnCirculos);
+		navigator.geolocation.getCurrentPosition(localizame.obtenerPosicion,localizame.correEnCirculos);
 	},
 	obtenerPosicion: function(posicion){
 		localizame.mostrarPosicion(posicion.coords.latitude, posicion.coords.longitude);
 	},
 	mostrarPosicion: function(lat,lon){
-    	var latlng = new google.maps.LatLng(lat, lon);
-    	alert(latlng);
-	    //geocoder = new google.maps.Geocoder();
-	    //geocoder.geocode({ "latLng": latlng }, function (results, status) {
-
-	        var mapaPersonalizado = {
-	            zoom: 14,
-	            center: latlng,
-	            mapTypeControl: false,
-	            scrollwheel: false,
-	            draggable: true,
-	            scaleControl: false,
-	            zoomControl: false,
-	            disableDefaultUI: true,
-	            disableDoubleClickZoom: true,
-	            navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
-	            mapTypeId: google.maps.MapTypeId.TERRAIN
-	        };
-
-	        var map = new google.maps.Map(document.getElementById("mapdiv"), mapaPersonalizado);
-	        var marker = new google.maps.Marker({
-	            map: map,
-	            position: latlng,
-	            animation: google.maps.Animation.DROP,
-	            title: "Usted esta aqui",
-	            icon: 'js/img/icon.png'
-	        });
-
-	   //});
+		//Posición del mapa
+		var latlng = new google.maps.LatLng(lat, lng);
+		var myOptions = {
+			zoom: 16,
+			center: latlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("mapdiv"),myOptions);
+		//Marcador
+		var marker = new google.maps.Marker({
+			position: latlng, 
+			map: map, 
+			title:"Mi posición"
+		});
 	},
 	correEnCirculos: function(error){
     switch (error.code) {
