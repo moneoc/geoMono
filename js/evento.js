@@ -14,12 +14,20 @@ var fn = {
 	dibujarMapa: function(lat, lng) {
 		//Posición del mapa
 		var latlng = new google.maps.LatLng(lat, lng);
-		var myOptions = {
-			zoom: 16,
-			center: latlng,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		};
-		var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+		var confGoogleMaps = {
+            zoom: 14,
+            center: latlng,
+            mapTypeControl: false,
+            scrollwheel: false,
+            draggable: true,
+            scaleControl: false,
+            zoomControl: false,
+            disableDefaultUI: true,
+            disableDoubleClickZoom: true,
+            navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
+            mapTypeId: google.maps.MapTypeId.TERRAIN
+        };
+		var map = new google.maps.Map(document.getElementById("map_canvas"),confGoogleMaps);
 		//Marcador
 		var marker = new google.maps.Marker({
 			position: latlng, 

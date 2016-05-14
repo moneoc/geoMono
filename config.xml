@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns   = "http://www.w3.org/ns/widgets"
+    <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "mx.cenet.geoApp"
-        versionCode = "1" 
-        version     = "1.0.0" >
+        id          = "mx.cenet.geoapp"
+        version     = "1.0.0"
+        versionCode = "1" >
 
-    <!-- versionCode is optional and Android only -->
+        <preference name="phonegap-version" value="3.7.0" />
 
-    <name>geoApp</name>
+        <name>geoAppomn</name>
 
-    <description>
-        Practica de Geolocaliacion 
-    </description>
+        <description>
+            Aplicación de prueba para geolocalización omn. 
+        </description>
 
-    <author href="http://www.laitaliana.com.mx" email="moneoc@gmail.com">
-        Mr. Van Verwest
-    </author>
-
-    <preference name="phonegap-version" value="3.7.0" />
-    
-	<gap:plugin name="org.apache.cordova.geolocation" />
-	
-	<icon src="'icon.png'" platform="android" />
-</widget>
+        <author href="http://www.laitaliana.com.mx" email="moneoc@gmail.com">
+            Mr. Van Verwest
+        </author>
+        
+        <icon src="icon.png" />
+        
+        <gap:plugin name="org.apache.cordova.geolocation" />
+    </widget>
