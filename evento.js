@@ -17,7 +17,15 @@ var fn = {
 		var confGoogleMaps = {
             zoom: 14,
             center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeControl: false,
+            scrollwheel: false,
+            draggable: true,
+            scaleControl: false,
+            zoomControl: false,
+            disableDefaultUI: true,
+            disableDoubleClickZoom: true,
+            navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
+            mapTypeId: google.maps.MapTypeId.TERRAIN
         };
 		var map = new google.maps.Map(document.getElementById("map_canvas"),confGoogleMaps);
 		//Marcador
