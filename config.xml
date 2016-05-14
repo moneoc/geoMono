@@ -10,11 +10,11 @@
     <name>geoApp</name>
 
     <description>
-        Práctica de Geolocalización 
+        Practica de Geolocaliacion 
     </description>
 
     <author href="http://www.laitaliana.com.mx" email="moneoc@gmail.com">
-        Mr. Octavio Monroy
+        Mr. Van Verwest
     </author>
 
     <preference name="phonegap-version" value="3.7.0" />
