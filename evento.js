@@ -30,9 +30,11 @@ var fn = {
 		var map = new google.maps.Map(document.getElementById("map_canvas"),confGoogleMaps);
 		//Marcador
 		var marker = new google.maps.Marker({
-			position: latlng, 
-			map: map, 
-			title:"Mi posición"
+			map: map,
+            position: latlng,
+            animation: google.maps.Animation.DROP,
+            title: "Usted esta aqui",
+            icon: 'icoloc.png'
 		});
 	},
 };
